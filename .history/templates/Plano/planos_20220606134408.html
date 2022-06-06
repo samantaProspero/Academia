@@ -1,0 +1,39 @@
+{% extends 'Cliente/base.html' %}
+{% load static %}
+
+{% block estilo %}
+  <link rel="stylesheet" href="{% static 'css/planos1.css' %}">
+{% endblock estilo %}
+
+{% block header %}
+  <div class="title">
+    <img id=alunos src="{% static 'icons/peso-branco.png' %}">
+    <p>planos</p>
+  </div>
+{% endblock header %}
+{% block conteudo %}
+      <div class="planos-lista">
+        
+        <div class="area-planos">
+          <table>
+          <thead>
+              <th>Curso</th>
+              <th>Aulas</th>
+              <th>Valor</th>
+          </thead>
+            <tbody>
+              {%for plano in plano %}
+              <div>
+              <tr>
+                <td><a id="add-link" href="/plano/{{Planos.nome_plano}}">{{plano.nome_plano}}</a></td>
+                <td><a id="add-link" href="/plano/{{Planos.quantidade_aulas}}">{{plano.quantidade_aulas}}</a></td>
+                <td><a id="add-link" href="/plano/{{Planos.valor}}">{{plano.valor}}</a></td>
+              </tr>
+              {% endfor %}
+            </div>
+            </tbody>
+          </table>
+        </div>
+        <button name="voltar" onclick="javascript:history.back()">Voltar</button>
+      </div>
+{% endblock conteudo%}

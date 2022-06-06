@@ -1,0 +1,41 @@
+{% extends 'Cliente/base.html' %}
+{% load static %}
+
+{% block estilo %}
+  <link rel="stylesheet" href="{% static 'css/clientes1.css' %}">
+{% endblock estilo %}
+
+{% block header %}
+  <div class="title">
+    <img id=alunos src="{% static 'icons/prancheta.png' %}">
+    <p>controle de acesso</p>
+  </div>
+{% endblock header %}
+{% block conteudo %}
+      <div class="clientes-lista">
+        
+        <div class="area-clientes">
+          <table>
+            <thead>
+              <th>Nome Completo</th>
+              <th>CPF</th>
+              <th>Data Acesso</th>
+              <th>Acesso</th>
+            </thead>
+            <tbody>
+              {%for acesso_cliente in usuario %}
+              <div>
+              <tr>
+                <td><a id="add-link" href="/usuario/{{acesso_cliente.nome_acesso}}">{{acesso_cliente.nome_acesso}}</a></td>
+                <td><a id="add-link" href="/usuario/{{acesso_cliente.cpf_acesso}}">{{acesso_cliente.cpf_acesso}}</a></td>
+                <td><a id="add-link" href="/usuario/{{acesso_cliente.data_acesso}}">{{acesso_cliente.data_acesso}}</a></td>
+                <td><a id="add-link" href="/usuario/{{acesso_cliente.status_acesso}}">{{acesso_cliente.status_acesso}}</a></td>
+              </tr>
+              {% endfor %}
+            </div>
+            </tbody>
+          </table>
+        </div>
+        <button name="voltar" onclick="javascript:history.back()">Voltar</button>
+      </div>
+{% endblock conteudo %}
