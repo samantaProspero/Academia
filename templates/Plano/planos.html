@@ -20,6 +20,7 @@
               <th>Curso</th>
               <th>Aulas</th>
               <th>Valor</th>
+              <th>Excluir</th>
           </thead>
             <tbody>
               {%for plano in plano %}
@@ -28,6 +29,7 @@
                 <td><a id="add-link" href="/plano/{{Planos.nome_plano}}">{{plano.nome_plano}}</a></td>
                 <td><a id="add-link" href="/plano/{{Planos.quantidade_aulas}}">{{plano.quantidade_aulas}}</a></td>
                 <td><a id="add-link" href="/plano/{{Planos.valor}}">{{plano.valor}}</a></td>
+                <td><a class="add-link delete-td" href="/"><img id="planos-delete" src="{% static 'icons/delete.png' %}"></a></td>
               </tr>
               {% endfor %}
             </div>

@@ -24,6 +24,7 @@
               <th>Data Final</th>
               <th>Aulas Restantes</th>
               <th>Último Acesso</th>
+              <th>Deletar</th>
             </thead>
             <tbody>
               {%for Usuarios in usuario %}
@@ -36,6 +37,12 @@
                 <td><a class="add-link" href="/usuario/{{Usuarios.data_final}}">{{Usuarios.data_final}}</a></td>
                 <td><a class="add-link" href="/usuario/{{Usuarios.quantidade_aulas}}">{{Usuarios.quantidade_aulas}}</a></td>
                 <td><a class="add-link" href="/usuario/{{Usuarios.acesso_anterior}}">{{Usuarios.acesso_anterior}}</a></td>
+                <td><a class="add-link delete-td" href="/"><img id="alunos-delete" src="{% static 'icons/delete.png' %}"></a></td>
+                {% comment %} <td>
+                  <a href="/">
+                      <img id="alunos-delete" src="{% static 'icons/delete.png' %}">
+                  </a>                
+                </td> {% endcomment %}
               </tr>
               {% endfor %}
             </div>

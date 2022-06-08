@@ -19,8 +19,8 @@
             <form id="form-cadastro" role="form" method="post" action="{% url 'realizar_cadastro' %} " enctype="multipart/form-data">
               {% csrf_token %}
               <div class="input-container">
-                <label >Nome Completo*: </label>
-                <input type="text" class="form-control" placeholder="nome" id="nome" name="nome">
+                <label >Nome*: </label>
+                <input type="text" class="form-control" placeholder="nome" id="nome" name="nome completo">
               </div>
               <div class="input-container">
                 <label for="telefone">Telefone: </label>
@@ -35,11 +35,11 @@
                 <input type="text" class="form-control" placeholder="Data final do plano" id="data_final" name="data_final">
               </div>
               <div class="input-container">
-                <label for="plano">Plano escolhido*:</label>
-                <input type="text" class="form-control" placeholder="plano escolhido" id="plano" name="plano">
+                <label for="plano">Plano*:</label>
+                <input type="text" class="form-control" placeholder="plano escolhido" id="plano" name="plano escolhido">
               </div>
               <div class="input-container">
-                <label for="plano">Quantidade de aulas*:</label>
+                <label for="plano">Aulas*:</label>
                 <input type="text" class="form-control" placeholder="Quantidade de aulas" id="quantidade_aulas" name="quantidade_aulas">
               </div>
               <div id="buttons-div">
