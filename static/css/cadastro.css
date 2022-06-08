@@ -50,7 +50,6 @@
   align-items: center;
   padding: 1.5rem;
   border-radius: 8px;
-
   padding-top: 0.7rem;
 }
 
@@ -82,6 +81,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-bottom: -3rem;
 }
 .area-cadastro #form-cadastro #buttons-div input[type="button"],
 .area-cadastro #form-cadastro #buttons-div input[type="submit"] {
